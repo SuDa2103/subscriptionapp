@@ -1,2 +1,143 @@
 // Import page-specific CSS files here.
 @import "home";
+.color-code-container {
+    padding: 20px 30px;
+    margin: 20px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+.subscriptions-container {
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    margin: 0px 10px 20px 0px;
+    width: 100%;
+    height: 668px;
+    // margin-top: 50px;
+}
+
+.subscription-card {
+  display: flex;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  margin: 0px 0 5px 0;
+  position: relative;
+  border-radius: 7px;
+  transition: transform .5s ease;
+  height: 65px;
+  &:hover {
+    .h6-expires-soon {
+      opacity: 0.8;
+    }
+}
+
+.card-trip-pricing {
+  position: absolute;
+  right: 16px;
+  top: 26px;
+  font-size: 16px;
+  color: black;
+}
+
+.h6-expires-soon {
+  opacity: 0;
+  color: #e50a13;
+  margin-left: 10px;
+}
+
+.subscription-card-info {
+  color: black;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 10px;
+
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 45px;
+  }
+}
+
+.card-trip-user {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  width: 40px;
+}
+
+.subscription-card-header {
+  height: 45px;
+  border-bottom: lightgrey solid 1px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius-top: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  align-items:center;
+}
+
+#button-manage-subscriptions {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 30px;
+  font-size: 11px;
+}
+
+.subscription-card-description {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  font-size: 14px;
+}
+
+.company-logo {
+  border: lightgrey solid 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.subscription-title {
+  margin-right: 740px;
+  font-size: 20px;
+}
+
+.zoom:hover {
+  transform: scale(1.03);
+}
+
+.red-status {
+  background-color: #bf0b0b;
+  height: 100%;
+  width: 10px;
+}
+
+.yellow-status {
+  background-color: #fce114;
+  height: 100%;
+  width: 10px;
+}
+.green-status {
+  background-color: #09a31e;
+  height: 100%;
+  width: 10px;
+}
+
+.subscriptions-table-category-names {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 10px;
+   margin: 20px 0px;
+}
+
