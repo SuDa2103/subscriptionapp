@@ -1,0 +1,54 @@
+    <div class="subscriptions-container">
+      <div class="section-title"><h5 class='m-0'>My Subscriptions (<%=  @subscriptions.count %>)</h5>
+        <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription  <i class="fas fa-plus"></i></button>
+      </div>
+      <div class="subscriptions-table-category-names">
+        <div class='service-title'>SERVICE</div>
+        <div class='price-title'>PRICE</div>
+      </div>
+      <div class="subscriptions-holder">
+        <% @subscriptions.each do |subscription| %>
+          <%= link_to subscription_path(subscription), style: 'text-decoration: none; margin: 0;' do %>
+            <div class="subscription-card zoom">
+              <div class="subscription-card-info">
+                <h2><%= subscription.title.capitalize %></h2>
+                <h3 class="card-trip-pricing">$<%= subscription.price %></h3>
+                <div>
+                  <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------- Large modal ---------->
+
+
+<div class="cards-container">
+  <div class="modal fade" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-container">
+            <h2>Add Subscription</h2>
+            <div>
+              <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for Subscription.new do |f| %>
+          <%= f.input :title %>
+          <%= f.input :price %>
+          <%= f.input :start_date %>
+          <%= f.input :billing_frequency %>
+          <%= f.button :submit, class: "btn add-sub-btn" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
