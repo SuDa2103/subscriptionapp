@@ -45,7 +45,7 @@
           <%= f.input :title %>
           <%= f.input :price %>
           <%= f.input :start_date %>
-          <%= f.input :billing_frequency %>
+          <%= f.input :billing_frequency, :collection => %w[Weekly Monthly Quarterly Annually 2yr 3yr] %> %>
           <%= f.button :submit, class: "btn add-sub-btn" %>
           <% end %>
         </div>
