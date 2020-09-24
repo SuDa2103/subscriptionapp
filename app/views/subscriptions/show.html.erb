@@ -1,0 +1,5 @@
+<h1><%= @subscription.title %></h1>
+<p><%= @subscription.price %></p>
+<% if @subscription.title.downcase == 'audible' %>
+  <%= render 'audible' %>
+<% end %>

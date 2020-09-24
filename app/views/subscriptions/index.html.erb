@@ -1,4 +1,4 @@
-    <div class="subscriptions-container">
+    <div class="container">
       <div class="section-title"><h5 class='m-0'>My Subscriptions (<%=  @subscriptions.count %>)</h5>
         <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription  <i class="fas fa-plus"></i></button>
       </div>
@@ -45,7 +45,7 @@
           <%= f.input :title %>
           <%= f.input :price %>
           <%= f.input :start_date %>
-          <%= f.input :billing_frequency %>
+          <%= f.input :billing_frequency, :collection => %w[Weekly Monthly Quarterly Annually 2yr 3yr] %> %>
           <%= f.button :submit, class: "btn add-sub-btn" %>
           <% end %>
         </div>
