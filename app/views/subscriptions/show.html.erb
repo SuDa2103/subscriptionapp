@@ -1,6 +1,9 @@
-<div class="container">
+<div class="text-center align-middle">
   <h1><%= @subscription.title %></h1>
   <p><%= @subscription.price %></p>
+  <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first.downcase %>.com" class="show-logo">
+  <br>
+  <br>
   <% if @subscription.title.downcase == 'audible' %>
   <%= render 'audible' %>
   <% end %>
